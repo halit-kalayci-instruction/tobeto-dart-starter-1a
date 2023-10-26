@@ -129,4 +129,15 @@ void main() {
   for (int sayi in sayilar) {
     print(sayi * 2);
   }
+
+  Map kullanicilar = {
+    0: {"isim": "Halit", "soyAd": "Kalaycı", "yas": 25, "üye": true},
+    1: {"isim": "Engin", "soyAd": "Demiroğ", "yas": 30, "üye": true},
+    2: {"isim": "İrem", "soyAd": "", "yas": 17, "üye": false},
+    3: {"isim": "İrem", "soyAd": "", "yas": 17, "üye": false},
+  };
+
+  print(kullanicilar.containsKey(0));
+  print(kullanicilar[0].containsKey("name"));
+  print(kullanicilar[0].containsValue("Ahmet"));
 }
