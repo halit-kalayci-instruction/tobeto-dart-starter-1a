@@ -152,8 +152,8 @@ void main() {
 
   // instance
   Product product = new Product.withValues("Laptop", 1500, 50); // heap
-  Product product2 = new Product();
-  product2.sell();
+  Product product2 = new Product.withValues("Telefon", 5000, 10);
+  product.sell();
 }
 
 // void => geri dönüş türü olmayan
@@ -177,15 +177,15 @@ double bolme(int a, int b) => a / b;
 
 // Kalıp
 class Product {
-  String? name;
-  double? price;
-  int? stock;
+  String name;
+  double price;
+  int stock;
+  static String? description;
 
   // ctor constructor => yapıcı bloklar
   // named constructor
-  Product() {
-    print("Bir product üretildi");
-  }
+
+  Product.withValues(this.name, this.price, this.stock) {}
 
   // classin içerisindeki metotlarda classın içindeki bir attribute ya da method this. ile çağırılır
   // this => classin kendisi
@@ -194,9 +194,10 @@ class Product {
   //   this.price = price;
   //   this.stock = stock;
   // }
-  Product.withValues(this.name, this.price, this.stock) {}
 
   void sell() {
-    print("Ürün satıldı");
+    print(this.name + " ürünü satıldı");
   }
+
+  static void buy() {}
 }
