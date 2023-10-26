@@ -96,4 +96,37 @@ void main() {
   } while (sayi2 < 20);
   // do while => koşula bakmaksızın scope'u bir kere çalıştırır sonra koşula bakar
   // while => direkt koşula bakar.
+  print("***** Listeler ******");
+  List isimler = [
+    "Halit",
+    "Engin",
+    "Ahmet",
+    "İrem",
+    "Yeşim",
+    10,
+    50,
+    true,
+    false
+  ];
+  print(isimler[isimler.length - 1]);
+  print(isimler.last);
+  print(isimler.first);
+  print(isimler.runtimeType);
+
+  List<int> sayilar = [0, 1, 2, 3, 4];
+  sayilar.add(10);
+  sayilar.addAll([11, 12, 13, 14]);
+  //sayilar.clear();
+  sayilar.remove(15);
+  print(sayilar);
+
+  // 10 -> 9
+  for (int i = 0; i < sayilar.length; i++) {
+    print(sayilar[i] * sayilar[i]);
+  }
+  print("**********");
+  // sayilar isimli listeyi gez, her gezdiğin sayıya sayı takma adını ver ve döngüyü oluştur..
+  for (int sayi in sayilar) {
+    print(sayi * 2);
+  }
 }
