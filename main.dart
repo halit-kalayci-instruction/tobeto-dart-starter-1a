@@ -68,4 +68,32 @@ void main() {
     print("Reşit değil");
 
   age2 >= 18 ? print("Reşit") : print("Reşit değil");
+
+  // döngüler
+  // iteration
+
+  // for , while - do while
+  // i = i + 1
+  // i += 1
+  // i++
+
+  // belirli => for
+  // belirsiz => while,do while
+  for (int i = 0; i < 10; i++) {
+    print(i);
+  }
+  print("**********");
+  int sayi = 30;
+  while (sayi < 20) {
+    print(sayi);
+    sayi = sayi + 1;
+  }
+  print("************");
+  int sayi2 = 30;
+  do {
+    print(sayi2);
+    sayi2 = sayi2 + 1;
+  } while (sayi2 < 20);
+  // do while => koşula bakmaksızın scope'u bir kere çalıştırır sonra koşula bakar
+  // while => direkt koşula bakar.
 }
