@@ -140,4 +140,26 @@ void main() {
   print(kullanicilar.containsKey(0));
   print(kullanicilar[0].containsKey("name"));
   print(kullanicilar[0].containsValue("Ahmet"));
+
+  // fonksiyonlar
+  // scope'u içerisindeki kodları çağırıldığında execute eder.
+  sayHello();
+  int toplam1 = topla(1, 2);
+  int toplam2 = topla(5, 10);
+  int toplam3 = topla(20, 30);
+  int toplam4 = topla(40, 50);
+  print(toplam1);
 }
+
+// void => geri dönüş türü olmayan
+void sayHello() {
+  print("hello");
+}
+
+int topla(int a, int b) {
+  return a + b;
+  print("burası return sonrası");
+}
+
+// arrow function
+int cikar(int a, int b) => a - b;
