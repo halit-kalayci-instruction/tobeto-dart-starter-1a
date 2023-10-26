@@ -149,6 +149,11 @@ void main() {
   int toplam3 = topla(20, 30);
   int toplam4 = topla(40, 50);
   print(toplam1);
+
+  // instance
+  Product product = new Product.withValues("Laptop", 1500, 50); // heap
+  Product product2 = new Product();
+  product2.sell();
 }
 
 // void => geri dönüş türü olmayan
@@ -162,4 +167,36 @@ int topla(int a, int b) {
 }
 
 // arrow function
+// fonksiyon tek satır ise
 int cikar(int a, int b) => a - b;
+
+// double bolme(int a, int b) {
+//   return a / b;
+// }
+double bolme(int a, int b) => a / b;
+
+// Kalıp
+class Product {
+  String? name;
+  double? price;
+  int? stock;
+
+  // ctor constructor => yapıcı bloklar
+  // named constructor
+  Product() {
+    print("Bir product üretildi");
+  }
+
+  // classin içerisindeki metotlarda classın içindeki bir attribute ya da method this. ile çağırılır
+  // this => classin kendisi
+  // Product.withValues(String name, double price, int stock) {
+  //   this.name = name;
+  //   this.price = price;
+  //   this.stock = stock;
+  // }
+  Product.withValues(this.name, this.price, this.stock) {}
+
+  void sell() {
+    print("Ürün satıldı");
+  }
+}
